@@ -6,15 +6,16 @@ import { FaWallet } from "react-icons/fa6";
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
 import { MdDashboard } from "react-icons/md";
-
-
-
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
     const [cart] = useCart();
     const [isAdmin] = useAdmin();
     return (
         <div className="flex flex-col md:flex-row">
+            <Helmet>
+                <title>Bistro | DashBoard</title>
+            </Helmet>
             <div className="w-full md:w-64 min-h-screen bg-[#D1A054] px-2 py-6">
                 <div className="text-center my-6">
                     <h2 className="text-2xl font-Inter font-bold text-[#151515] uppercase mb-3">Bistro Food</h2>
